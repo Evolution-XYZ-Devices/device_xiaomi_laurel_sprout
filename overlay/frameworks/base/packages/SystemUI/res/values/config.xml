@@ -16,16 +16,9 @@
 ** limitations under the License.
 */
 -->
-
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
-    <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">true</bool>
-
-    <!-- Doze: check proximity sensor before pulsing? -->
-    <bool name="doze_proximity_check_before_pulse">true</bool>
-
     <!-- Type of a sensor that provides a low-power estimate of the desired display
          brightness, suitable to listen to while the device is asleep (e.g. during
          always-on display) -->
@@ -38,6 +31,7 @@
         <item>255</item>
         <item>1</item>
     </integer-array>
+    
     <!-- Doze: Table that translates sensor values from the doze_brightness_sensor_type sensor
                to an opacity value for a black scrim that is overlayed in AOD1.
                Valid range is from 0 (transparent) to 255 (opaque).
@@ -50,14 +44,4 @@
         <item>0</item>
         <item>0</item>
     </integer-array>
-
-    <!-- Smart replies in notifications: Whether by default tapping on a choice should let the user
-         edit the input before it is sent to the app. Developers can override this via
-         RemoteInput.Builder.setEditChoicesBeforeSending. -->
-    <bool name="config_smart_replies_in_notifications_edit_choices_before_sending">true</bool>
-
-    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
-    vibrator is capable of subtle vibrations -->
-    <bool name="config_vibrateOnIconAnimation">false</bool>
 </resources>
-
