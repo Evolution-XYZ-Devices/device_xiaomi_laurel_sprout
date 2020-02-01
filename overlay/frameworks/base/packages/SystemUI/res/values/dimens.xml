@@ -8,7 +8,13 @@
      <dimen name="rounded_corner_radius_bottom">128.0px</dimen>
      <dimen name="rounded_corner_radius_top">144.0px</dimen>
      <dimen name="rounded_corner_content_padding">0.0dip</dimen>
-     
+
      <!-- the padding on the start and the end of the statusbar -->
      <dimen name="status_bar_extra_padding">8dp</dimen>
+
+     <!-- fingerprint dimens -->
+     <dimen name="fingerprint_dialog_animation_translation_offset">350.0dip</dimen>
+     <dimen name="fingerprint_dialog_corner_size">4.0dip</dimen>
+     <dimen name="fingerprint_dialog_fp_icon_size">64.0dip</dimen>
+     <dimen name="fingerprint_icon_additional_padding">4.0dip</dimen>
  </resources>
