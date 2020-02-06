@@ -107,8 +107,9 @@ static inline uint32_t getScaledBrightness(const LightState& state, uint32_t max
     return scaleBrightness(getBrightness(state), maxBrightness);
 }
 
-static void handleBacklight(const LightState& state) {
-    uint32_t brightness = getScaledBrightness(state, MAX_LCD_BRIGHTNESS);
+static void handleBacklight(Type /* type */, const LightState& state) {
+    uint32_t brightness = getScaledBrightness(state, getMaxBrightness(LCD_LED MAX_BRIGHTNESS));
+    // Never use 1 as minimum brightness to prevent black display issue
     if (brightness == 1){
         brightness = 2;
     }
