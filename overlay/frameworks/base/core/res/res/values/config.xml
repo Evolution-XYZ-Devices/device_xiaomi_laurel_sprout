@@ -529,11 +529,8 @@
          specified -->
     <string name="default_wallpaper_component" translatable="false">com.breel.wallpapers19/com.breel.wallpapers19.doodle.wallpaper.variations.DoodleWallpaperV1</string>
 
-    <!-- Does the battery LED support multiple colors?
-         Used to decide if the user can change the colors -->
-    <bool name="config_multiColorBatteryLed">false</bool>
-
     <!-- Whether to use base rounded corner radius for window animations instead
           of min between top and bottom radius-->
     <bool name="config_useDefaultRoundedCornerRadius">true</bool>
+
 </resources>
