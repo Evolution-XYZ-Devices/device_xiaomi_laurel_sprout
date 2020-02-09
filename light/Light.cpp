@@ -34,6 +34,8 @@
 #define DELAY_OFF	    "delay_off"
 #define DELAY_ON 	    "delay_on"
 
+#define MAX_LCD_BRIGHTNESS    2047
+
 namespace {
 /*
  * Write value to path and close file.
@@ -108,7 +110,7 @@ static inline uint32_t getScaledBrightness(const LightState& state, uint32_t max
 }
 
 static void handleBacklight(Type /* type */, const LightState& state) {
-    uint32_t brightness = getScaledBrightness(state, getMaxBrightness(LCD_LED MAX_BRIGHTNESS));
+    uint32_t brightness = getScaledBrightness(state, MAX_LCD_BRIGHTNESS);
     // Never use 1 as minimum brightness to prevent black display issue
     if (brightness == 1){
         brightness = 2;
