@@ -14,26 +14,8 @@
 // limitations under the License.
 //
 
-
 cc_library {
-    name: "libgptutils.xiaomi_trinket",
-    vendor: true,
-    recovery_available: true,
-    shared_libs: [
-        "libcutils",
-        "liblog",
-        "libz",
-    ],
-    cflags: [
-        "-Wall",
-        "-Werror",
-    ],
-    srcs: [
-        "gpt-utils.cpp",
-    ],
-    owner: "qti",
-    header_libs: [
-        "generated_kernel_headers",
-    ],
-    export_include_dirs: ["."],
+    name: "bootctrl.trinket",
+    defaults: ["bootctrl_hal_defaults"],
+    static_libs: ["libgptutils.xiaomi_trinket"],
 }
