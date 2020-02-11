@@ -10,12 +10,6 @@
       "target_path":"vendor/xiaomi",
       "branch":"ten"
    },
-   {  
-      "remote":"lineage",
-      "repository":"android_packages_resources_devicesettings",
-      "target_path":"packages/resources/devicesettings",
-      "branch":"lineage-17.1"
-  },
   {
     "repository": "packages_apps_WallpapersBReel2019",
     "target_path": "packages/apps/WallpapersBReel2019",
