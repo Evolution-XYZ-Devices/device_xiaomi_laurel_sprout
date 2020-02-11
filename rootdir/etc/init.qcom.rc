@@ -38,3 +38,7 @@ on property:sys.boot_completed=1
 	
     stop vendor.sensors
 	
+service charger /system/bin/charger
+     class charger
+     group system graphics
+     seclabel u:r:charger:s0
