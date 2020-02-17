@@ -1,19 +1,10 @@
-
-[  
-   {  
-      "repository":"kernel_xiaomi_laurel_sprout",
-      "target_path":"kernel/xiaomi/laurel_sprout",
-      "branch":"ten"
-   },
-   {  
-      "repository":" vendor_xiaomi",
-      "target_path":"vendor/xiaomi",
-      "branch":"ten"
-   },
+[
   {
-    "repository": "packages_apps_WallpapersBReel2019",
-    "target_path": "packages/apps/WallpapersBReel2019",
-    "branch": "ten",
-    "remote": "pixel-gitlab"
+    "repository"  : "kernel_xiaomi_laurel_sprout",
+    "target_path" : "kernel/xiaomi/laurel_sprout"
+  },
+  {
+    "repository"  : "vendor_xiaomi_laurel_sprout",
+    "target_path" : "vendor/xiaomi/laurel_sprout"
   }
 ]
