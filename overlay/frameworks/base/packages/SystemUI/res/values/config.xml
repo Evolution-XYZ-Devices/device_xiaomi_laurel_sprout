@@ -26,8 +26,5 @@
     <!-- Doze: check proximity sensor before pulsing? -->
     <bool name="doze_proximity_check_before_pulse">true</bool>
 
-    <!-- Color of the FOD view -->
-    <color name="config_fodColor">#00ffffff</color>
-
 </resources>
 
