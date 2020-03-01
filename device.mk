@@ -20,9 +20,6 @@ $(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vend
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 29
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
