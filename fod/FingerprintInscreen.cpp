@@ -49,14 +49,6 @@
 namespace {
 
 template <typename T>
-static T get(const std::string& path, const T& def) {
-    std::ifstream file(path);
-    T result;
-    file >> result;
-    return file.fail() ? def : result;
-}
-
-template <typename T>
 static void set(const std::string& path, const T& value) {
     std::ofstream file(path);
     file << value;
