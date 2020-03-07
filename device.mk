@@ -53,6 +53,9 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl \
     update_engine_client
 
+PRODUCT_PACKAGES += \
+    Updater
+
 #PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 #    bootctrl.trinket \
 #    libcutils \
