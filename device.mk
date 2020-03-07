@@ -40,18 +40,27 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-#A/B related packages
 PRODUCT_PACKAGES += \
-    update_engine_client
+    otapreopt_script
 
 PRODUCT_PACKAGES += \
      bootctrl.trinket \
      bootctrl.trinket.recovery
 
-#Boot control HAL test app
+# Update engine
+PRODUCT_PACKAGES += \
+    bootctrl.trinket.recovery \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
 PRODUCT_PACKAGES_DEBUG += \
-    bootctl \
     update_engine_client
+
+# Boot control
+PRODUCT_PACKAGES_DEBUG += \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctl
 
 PRODUCT_PACKAGES += \
     Updater
