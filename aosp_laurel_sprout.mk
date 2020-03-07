@@ -33,6 +33,8 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI A3
 PRODUCT_MANUFACTURER := Xiaomi
 
+# Define Official tag
+CUSTOM_BUILD_TYPE := OFFICIAL
 
 BUILD_FINGERPRINT := "google/coral/coral:10/QQ1B.200205.002/6084387:user/release-keys"
 
