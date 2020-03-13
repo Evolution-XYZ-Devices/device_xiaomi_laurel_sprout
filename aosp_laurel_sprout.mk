@@ -30,9 +30,11 @@ PRODUCT_SHIPPING_API_LEVEL := 28
 PRODUCT_NAME := aosp_laurel_sprout
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := MI A3
+PRODUCT_MODEL := Mi A3
 PRODUCT_MANUFACTURER := Xiaomi
 
+# Define Official tag
+CUSTOM_BUILD_TYPE := OFFICIAL
 
 BUILD_FINGERPRINT := "google/coral/coral:10/QQ1B.200205.002/6084387:user/release-keys"
 

@@ -18,6 +18,14 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+# Dalvik heap configuration for a 4GB phone
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
+$(call inherit-product-if-exists, packages/apps/gcam/gcam.mk)
+
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Permissions
@@ -40,18 +48,30 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-#A/B related packages
 PRODUCT_PACKAGES += \
-    update_engine_client
+    otapreopt_script
 
 PRODUCT_PACKAGES += \
      bootctrl.trinket \
      bootctrl.trinket.recovery
 
-#Boot control HAL test app
+# Update engine
+PRODUCT_PACKAGES += \
+    bootctrl.trinket.recovery \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
 PRODUCT_PACKAGES_DEBUG += \
-    bootctl \
     update_engine_client
+
+# Boot control
+PRODUCT_PACKAGES_DEBUG += \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctl
+
+PRODUCT_PACKAGES += \
+    Updater
 
 #PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 #    bootctrl.trinket \
