@@ -1,6 +1,6 @@
 #
-# Copyright 2018 The Android Open Source Project
-# Copyright 2019 The PixelExperience Project
+# Copyright 2018 - 2020 The Android Open Source Project
+# Copyright 2019 - 2020 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -73,12 +73,6 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     Updater
 
-#PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-#    bootctrl.trinket \
-#    libcutils \
-#    libgptutils \
-#    libz
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothResCommon
@@ -142,15 +136,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
-# FM
-#PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio
-
-#PRODUCT_BOOT_JARS += \
-    qcom.fmradio
-
 # Fingerprint
 PRODUCT_COPY_FILES += \
     vendor/aosp/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
@@ -213,10 +198,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml
-
-#PRODUCT_BOOT_JARS += \
-#    ims-ext-common_system \
-#    telephony-ext
 
 # Boot control HAL
  PRODUCT_PACKAGES += \

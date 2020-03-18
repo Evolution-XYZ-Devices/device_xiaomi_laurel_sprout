@@ -1,6 +1,6 @@
 #
-# Copyright 2018 The Android Open Source Project
-# Copyright 2019 The PixelExperience Project
+# Copyright 2018-2020 The Android Open Source Project
+# Copyright 2019-2020 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -61,7 +61,6 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-#TARGET_KERNEL_CLANG_VERSION := 9.0.3
 TARGET_KERNEL_CONFIG := vendor/laurel_sprout-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
 
@@ -98,10 +97,6 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
-
-# FM
-#BOARD_HAVE_QCOM_FM := true
-#BOARD_HAS_QCA_FM_SOC := "cherokee"
 
 # Graphics
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
@@ -153,17 +148,6 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # SELinux
 PRIVATE_EXCLUDE_BUILD_TEST := true
-
-# Sepolicy
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-#    device/qcom/sepolicy/generic/private \
-#    $(DEVICE_PATH)/sepolicy/qcom-qva-private
-
-#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-#    device/qcom/sepolicy/generic/public \
-#    device/qcom/sepolicy/qva/public
 
 # Temporary Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/temp
