@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The PixelExperience Project
+# Copyright (C) 2019-2020 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,9 +23,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_GAPPS_ARCH := arm64
-
 PRODUCT_SHIPPING_API_LEVEL := 28
 
+# Define Official tag
+CUSTOM_BUILD_TYPE := OFFICIAL
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_laurel_sprout
 PRODUCT_DEVICE := laurel_sprout
@@ -33,10 +34,8 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A3
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Define Official tag
-CUSTOM_BUILD_TYPE := OFFICIAL
-
-BUILD_FINGERPRINT := "google/coral/coral:10/QQ1B.200205.002/6084387:user/release-keys"
+# Build Fingerprint
+BUILD_FINGERPRINT := "google/coral/coral:10/QQ2A.200305.003/6156912:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="laurel_sprout-user 9 PKQ1.190416.001 V10.3.6.0.PFQMIXM release-keys" \
