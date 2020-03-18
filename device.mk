@@ -30,8 +30,8 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    $(LOCAL_PATH)/permissions/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
+    $(LOCAL_PATH)/permissions/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
 # A/B
 AB_OTA_UPDATER := true
@@ -95,7 +95,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_WHITELIST += \
 
 # GSI specific tasks on boot
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/skip_mount.cfg:system/etc/init/config/skip_mount.cfg
+    $(LOCAL_PATH)/configs/skip_mount.cfg:$(TARGET_COPY_OUT_SYSTEM)/etc/init/config/skip_mount.cfg
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -138,16 +138,16 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    vendor/aosp/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 PRODUCT_PACKAGES += \
     lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_trinket
 
 #Hotspot
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    $(LOCAL_PATH)/configs/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-    $(LOCAL_PATH)/configs/hostapd.deny:system/etc/hostapd/hostapd.deny
+    $(LOCAL_PATH)/configs/hostapd.accept:$(TARGET_COPY_OUT_SYSTEM)/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/configs/hostapd_default.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/hostapd/hostapd_default.conf \
+    $(LOCAL_PATH)/configs/hostapd.deny:$(TARGET_COPY_OUT_SYSTEM)/etc/hostapd/hostapd.deny
 
 # Init
 PRODUCT_PACKAGES += \
@@ -161,11 +161,11 @@ PRODUCT_PACKAGES += \
     ims_ext_common.xml
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:system/etc/permissions/android.hardware.telephony.ims.xml
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -173,7 +173,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
+    $(LOCAL_PATH)/configs/media_profiles_vendor.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_profiles_vendor.xml
 
 # Net
 PRODUCT_PACKAGES += \
@@ -181,7 +181,7 @@ PRODUCT_PACKAGES += \
 
 # Placeholder
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/placeholder:system/etc/placeholder
+    $(LOCAL_PATH)/configs/placeholder:$(TARGET_COPY_OUT_SYSTEM)/etc/placeholder
 
 # Power
 PRODUCT_PACKAGES += \
