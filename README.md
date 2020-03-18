@@ -18,5 +18,9 @@ Display | 720x1560 pixels, 6.0
 Rear Camera  | 48MP/2MP/8MP
 Front Camera | 32MP
 
+Detailed device configuration for Xiaomi Mi A3
+=========================================
+https://www.gsmarena.com/xiaomi_mi_a3-9769.php
+
 ## Device picture
 ![Xiaomi Mi A3](https://i01.appmifile.com/webfile/globalimg/products/pc/mi-a3/MIA3_02.jpg "Xiaomi Mi A3")
