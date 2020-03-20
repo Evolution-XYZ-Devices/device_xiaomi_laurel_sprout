@@ -14,23 +14,27 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Color of the FOD view -->
-    <color name="config_fodColor">#00ff00</color>
+     <!-- Color of the FOD view -->
+     <color name="config_fodColor">#00ff00</color>
 
-    <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
-    <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
+     <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
+     <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
 
-    <!-- Max visible notification icons -->
-    <integer name="config_maxVisibleNotificationIcons">5</integer>
-    <integer name="config_maxVisibleNotificationIconsWhenDark">6</integer>
+     <!-- Max visible notification icons -->
+     <integer name="config_maxVisibleNotificationIcons">5</integer>
+     <integer name="config_maxVisibleNotificationIconsWhenDark">6</integer>
 
-    <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">true</bool>
+     <!-- Doze: does this device support STATE_DOZE?  -->
+     <bool name="doze_display_state_supported">true</bool>
 
-    <!-- Doze: check proximity sensor before pulsing? -->
-    <bool name="doze_proximity_check_before_pulse">false</bool>
+     <!-- Doze: check proximity sensor before pulsing? -->
+     <bool name="doze_proximity_check_before_pulse">false</bool>
 
-    <!-- Whether the binned brightness sensor reports a value of 0 on proximity
+     <!-- Burn in protection -->
+     <bool name="config_statusBarBurnInProtection">true</bool>
+     <integer name="config_shift_interval">60</integer>
+
+     <!-- Whether the binned brightness sensor reports a value of 0 on proximity
          near events -->
     <bool name="doze_brightness_sensor_reports_proximity" translatable="false">false</bool>
 </resources>
