@@ -13,6 +13,10 @@ on boot
     # Goodix fingerprint
     chmod 0666 /dev/goodix_fp
     chown system system /dev/goodix_fp
+
+    # Smart charging
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
 	
 service vendor.ss_ramdump_local /vendor/bin/subsystem_ramdump
     class late_start
