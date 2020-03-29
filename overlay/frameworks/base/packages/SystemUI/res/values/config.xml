@@ -16,15 +16,66 @@
 ** limitations under the License.
 */
 -->
-
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
-    <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">true</bool>
+    <!-- Type of a sensor that provides a low-power estimate of the desired display
+         brightness, suitable to listen to while the device is asleep (e.g. during
+         always-on display) -->
+    <string name="doze_brightness_sensor_type" translatable="false">xiaomi.sensor.aod</string>
+    <integer-array name="config_doze_brightness_sensor_to_brightness">
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>255</item>
+        <item>1</item>
+    </integer-array>
+    
+    <!-- Doze: Table that translates sensor values from the doze_brightness_sensor_type sensor
+               to an opacity value for a black scrim that is overlayed in AOD1.
+               Valid range is from 0 (transparent) to 255 (opaque).
+               -1 means keeping the current opacity. -->
+    <integer-array name="config_doze_brightness_sensor_to_scrim_opacity">
+        <item>-1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
 
-    <!-- Doze: check proximity sensor before pulsing? -->
-    <bool name="doze_proximity_check_before_pulse">true</bool>
+    <!-- Color of the FOD view -->
+     <color name="config_fodColor">#00ff00</color>
 
+     <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
+     <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
+
+     <!-- Max visible notification icons -->
+     <integer name="config_maxVisibleNotificationIcons">5</integer>
+     <integer name="config_maxVisibleNotificationIconsWhenDark">6</integer>
+
+     <!-- Doze: does this device support STATE_DOZE?  -->
+     <bool name="doze_display_state_supported">true</bool>
+
+     <!-- Doze: check proximity sensor before pulsing? -->
+     <bool name="doze_proximity_check_before_pulse">false</bool>
+
+     <!-- Burn in protection -->
+     <bool name="config_statusBarBurnInProtection">true</bool>
+     <integer name="config_shift_interval">60</integer>
+
+     <!-- Whether the binned brightness sensor reports a value of 0 on proximity
+         near events -->
+    <bool name="doze_brightness_sensor_reports_proximity" translatable="false">false</bool>
+
+    <!-- Smart replies in notifications: Whether by default tapping on a choice should let the user
+         edit the input before it is sent to the app. Developers can override this via
+         RemoteInput.Builder.setEditChoicesBeforeSending. -->
+    <bool name="config_smart_replies_in_notifications_edit_choices_before_sending">true</bool>
+
+    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
+    vibrator is capable of subtle vibrations -->
+    <bool name="config_vibrateOnIconAnimation">false</bool>
+    
 </resources>
-
