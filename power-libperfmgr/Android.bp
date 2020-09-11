@@ -13,8 +13,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+cc_library {
+    name: "libdisppower-xiaomi_sdm660",
+    proprietary: true,
+    srcs: [
+        "InteractionHandler.cpp",
+    ],
+     shared_libs: [
+        "libbase",
+        "libcutils",
+        "liblog",
+        "libperfmgr",
+        "libutils",
+    ],
+}
+
 cc_library_headers {
-    name: "pixel_power_headers",
+    name: "xiaomi_sdm660_power_headers",
     vendor_available: true,
     export_include_dirs: ["."],
 }
@@ -22,9 +37,15 @@ cc_library_headers {
 cc_binary {
     name: "android.hardware.power@1.3-service.laurel_sprout-libperfmgr",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.power@1.3-service.laurel_sprout-libperfmgr.rc"],
-    srcs: ["service.cpp", "Power.cpp", "InteractionHandler.cpp", "power-helper.c",
-            "display-helper.cpp"],
+    vintf_fragments: ["android.hardware.power@1.3-service.xiaomi_sdm660.xml"],
+    init_rc: ["android.hardware.power@1.3-service.xiaomi_sdm660-libperfmgr.rc"],
+    srcs: [
+        "service.cpp",
+        "Power.cpp",
+        "power-helper.c",
+        "InteractionHandler.cpp",
+        "display-helper.cpp",
+    ],
     cflags: [
         "-Wall",
         "-Werror",
@@ -32,7 +53,6 @@ cc_binary {
     shared_libs: [
         "libbase",
         "libhidlbase",
-        "libhidltransport",
         "liblog",
         "libutils",
         "libcutils",
@@ -40,11 +60,8 @@ cc_binary {
         "android.hardware.power@1.1",
         "android.hardware.power@1.2",
         "android.hardware.power@1.3",
+        "libdisppower-xiaomi_sdm660",
         "libperfmgr",
     ],
-	header_libs: [
-        "libhardware_headers",
-        "generated_kernel_headers",
-    ],
-    vendor: true,
+    proprietary: true,
 }
