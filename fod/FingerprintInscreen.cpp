@@ -28,9 +28,9 @@
 #define PARAM_NIT_FOD 3
 #define PARAM_NIT_NONE 0
 
-#define DISPPARAM_PATH "/sys/devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param"
-#define DISPPARAM_HBM_FOD_ON "0x1D20000"
-#define DISPPARAM_HBM_FOD_OFF "0x20F0000"
+#define DISPPARAM_PATH "/sys/class/drm/card0-DSI-1/disp_param"
+#define DISPPARAM_HBM_FOD_ON "0x1d007ff"
+#define DISPPARAM_HBM_FOD_OFF "0x20f0000"
 
 #define FOD_STATUS_PATH "/sys/class/touch/tp_dev/fod_status"
 #define FOD_STATUS_ON 1
@@ -102,6 +102,28 @@ Return<void> FingerprintInscreen::onHideFODView() {
 }
 
 Return<bool> FingerprintInscreen::handleAcquired(int32_t acquiredInfo, int32_t vendorCode) {
+    std::lock_guard<std::mutex> _lock(mCallbackLock);
+    if (mCallback == nullptr) {
+        return false;
+    }
+
+    if (acquiredInfo == 6) {
+        if (vendorCode == 22) {
+            Return<void> ret = mCallback->onFingerDown();
+            if (!ret.isOk()) {
+                LOG(ERROR) << "FingerDown() error: " << ret.description();
+            }
+            return true;
+        }
+
+        if (vendorCode == 23) {
+            Return<void> ret = mCallback->onFingerUp();
+            if (!ret.isOk()) {
+                LOG(ERROR) << "FingerUp() error: " << ret.description();
+            }
+            return true;
+        }
+    }
     LOG(ERROR) << "acquiredInfo: " << acquiredInfo << ", vendorCode: " << vendorCode << "\n";
     return false;
 }
@@ -118,10 +140,10 @@ Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
 Return<int32_t> FingerprintInscreen::getDimAmount(int32_t brightness) {
     float alpha;
 
-    if (brightness > 62) {
-        alpha = 1.0 - pow(brightness / 255.0 * 430.0 / 600.0, 0.45);
+    if (brightness > 62.0) {
+        alpha = 1.0 - pow((((brightness / 255.0) * 430.0) / 600.0), 0.455);
     } else {
-        alpha = 1.0 - pow(brightness / 200.0, 0.45);
+        alpha = 1.0 - pow((brightness / 210.0), 0.455);
     }
 
     return 255 * alpha;
@@ -131,7 +153,12 @@ Return<bool> FingerprintInscreen::shouldBoostBrightness() {
     return false;
 }
 
-Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallback>&) {
+Return<void> FingerprintInscreen::setCallback(const sp<::vendor::lineage::biometrics::fingerprint::inscreen::V1_0::IFingerprintInscreenCallback>& callback) {
+    (void) callback;
+    {
+        std::lock_guard<std::mutex> _lock(mCallbackLock);
+        mCallback = callback;
+    }
     return Void();
 }
 

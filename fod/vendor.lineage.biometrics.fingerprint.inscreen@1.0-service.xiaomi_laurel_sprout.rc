@@ -1,9 +1,15 @@
 on boot
     chown system system /sys/class/touch/tp_dev/fod_status
     chmod 0644 /sys/class/touch/tp_dev/fod_status
-
+    chown system system /sys/class/drm/card0-DSI-1/disp_param
+    chmod 0700 /sys/class/drm/card0-DSI-1/disp_param
+    chmod 0666 /dev/input/event1
     chown system system /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param
     chmod 0700 /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param
+
+on init
+    # Goodix fingerprint
+    chown system system /dev/goodix_fp
 
 service fingerprint-inscreen-1-0 /vendor/bin/hw/vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_laurel_sprout
     interface vendor.lineage.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
