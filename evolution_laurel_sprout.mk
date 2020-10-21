@@ -16,7 +16,7 @@ $(call inherit-product, device/xiaomi/laurel_sprout/device.mk)
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Inherit from custom vendor
-$(call inherit-product, vendor/MiuiCamera/config.mk)
+#$(call inherit-product, vendor/MiuiCamera/config.mk)
 
 # Props
 EVO_MAINTAINER := HemantSachdeva
