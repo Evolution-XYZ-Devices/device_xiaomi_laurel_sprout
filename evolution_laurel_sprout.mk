@@ -15,6 +15,9 @@ $(call inherit-product, device/xiaomi/laurel_sprout/device.mk)
 # Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
+# Inherit from custom vendor
+$(call inherit-product, vendor/MiuiCamera/config.mk)
+
 # Props
 EVO_MAINTAINER := HemantSachdeva
 EVO_BUILD_TYPE := UNOFFICIAL
