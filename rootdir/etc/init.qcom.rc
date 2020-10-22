@@ -1053,6 +1053,22 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     interface android.hardware.audio@4.0::IDevicesFactory default
     interface android.hardware.audio@2.0::IDevicesFactory default
 
+
+service logger /system/bin/logcat -b all -D -f /sdcard/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on post-fs-data
+        # Clear existing log and start the service
+        rm /sdcard/boot_log.txt
+        start logger
+
+on property:sys.boot_completed=1
+        # Stop the logger service
+        stop logger
 service vendor.hwcomposer-2-3 /vendor/bin/hw/android.hardware.graphics.composer@2.3-service
     override
     class hal animation
