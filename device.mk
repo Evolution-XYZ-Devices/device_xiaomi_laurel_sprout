@@ -197,6 +197,9 @@ PRODUCT_PACKAGES += \
     libldacBT_dec \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
