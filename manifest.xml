@@ -172,6 +172,8 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::IHealth/default</fqname>
+        <fqname>@3.0::IMapper/default</fqname>
+        <fqname>@4.0::IMapper/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.ir</name>
