@@ -471,8 +471,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+# Shims
+PRODUCT_PACKAGES += \
+    libdpmframework_shim
 
 # TextClassifier
 PRODUCT_PACKAGES += \
