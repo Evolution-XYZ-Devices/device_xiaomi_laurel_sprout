@@ -37,6 +37,9 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A3
 PRODUCT_MANUFACTURER := Xiaomi
 
+# ABI Checks
+SKIP_ABI_CHECKS := true
+
 # FOD Animation
 EXTRA_FOD_ANIMATIONS := true
 
