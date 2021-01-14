@@ -3757,6 +3757,8 @@ lib/libmmosal.so
 lib/libmmparser_lite.so
 lib/libmmrtpdecoder.so
 lib/libmmrtpencoder.so
+lib/libaudioclient:lib/libwfdaudioclient.so
+lib/libmediautils:lib/libwfdmediautils.so
 lib/libwfdavenhancements.so
 lib/libwfdclient.so
 lib/libwfdcommonutils.so
