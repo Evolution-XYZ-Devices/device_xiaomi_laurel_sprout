@@ -252,10 +252,12 @@ PRODUCT_PACKAGES += \
     gralloc.trinket \
     hwcomposer.trinket \
     libdisplayconfig \
+    libdisplayconfig.qti \
     libtinyxml \
     libvulkan \
     memtrack.trinket \
-    vendor.qti.hardware.display.allocator-service
+    vendor.qti.hardware.display.allocator-service \
+    vendor.display.config@2.0
 
 # Media
 PRODUCT_PACKAGES += \
@@ -269,7 +271,8 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libOmxG711Enc \
-    libstagefrighthw
+    libstagefrighthw \
+    libavservices_minijail
 
 # DRM
 PRODUCT_PACKAGES += \
