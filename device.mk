@@ -252,7 +252,7 @@ PRODUCT_PACKAGES += \
     gralloc.trinket \
     hwcomposer.trinket \
     libdisplayconfig \
-    libdisplayconfig.qti \
+    libdisplayconfig.vendor \
     libtinyxml \
     libvulkan \
     memtrack.trinket \
@@ -529,7 +529,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig.vendor \
     libnl \
     libqdMetaData \
     libqdMetaData.system \
