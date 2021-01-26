@@ -1,0 +1,2 @@
+allow toolbox file_contexts_file:file { getattr open read };
+allow toolbox vendor_time_data_file:dir { getattr open read search };

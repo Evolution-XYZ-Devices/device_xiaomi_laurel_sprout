@@ -1,1 +1,12 @@
 allow init adsprpcd_file:file mounton;
+allow init hwservicemanager:binder { call transfer };
+allow init system_file:file execute_no_trans;
+allow init vendor_file:file execute_no_trans;
+allow init vendor_sysfs_graphics:lnk_file read;
+allow init vndbinder_device:chr_file { ioctl map open read write };
+allow init sysfs_devices_system_cpu:file write;
+allow init vendor_latency_device:chr_file { open write };
+allow init vendor_sysfs_devfreq:file write;
+allow init vendor_sysfs_graphics:file write;
+allow init vendor_sysfs_kgsl:file write;
+allow init debugfs:file write;

@@ -1,0 +1,1 @@
+allow apexd self:capability kill;
