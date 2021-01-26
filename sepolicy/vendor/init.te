@@ -1,1 +1,1 @@
-allow init persist_block_device:lnk_file relabelto;
+allow init adsprpcd_file:file mounton;

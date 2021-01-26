@@ -1,1 +1,8 @@
-genfscon proc /tp_gesture u:object_r:proc_touchpanel:s0
+# Battery
+genfscon sysfs /devices/soc/c176000.i2c/i2c-2/2-001d            u:object_r:sysfs_battery_supply:s0
+
+# Camera
+genfscon sysfs /camera_sensorid/sensorid                        u:object_r:sysfs_graphics:s0
+
+# Touchpanel
+genfscon sysfs /touchpanel                                      u:object_r:sysfs_touchpanel:s0

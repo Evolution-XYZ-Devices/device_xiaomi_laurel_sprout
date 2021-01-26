@@ -1,24 +1,42 @@
+# Audio
+audio.sys.noisy.broadcast.delay         u:object_r:vendor_default_prop:s0
+audio.sys.offload.pstimeout.secs        u:object_r:vendor_default_prop:s0
+audio_hal.in_period_size                u:object_r:vendor_default_prop:s0
+audio_hal.period_multiplier             u:object_r:vendor_default_prop:s0
+persist.audio.fluence.voicecomm         u:object_r:vendor_default_prop:s0
+
 # Camera
-persist.camera.             u:object_r:vendor_camera_prop:s0
-camera.                     u:object_r:vendor_camera_prop:s0
-ro.boot.hwc                 u:object_r:vendor_camera_prop:s0
-vendor.camera.              u:object_r:vendor_camera_prop:s0
-vidhance.                   u:object_r:vendor_camera_prop:s0
-
-# Mlipay
-persist.sys.ifaa            u:object_r:ifaa_prop:s0
-persist.vendor.sys.pay.     u:object_r:ifaa_prop:s0
-
-# Miui
-ro.miui.                    u:object_r:exported_default_prop:s0
-ro.cust.test                u:object_r:exported_default_prop:s0
+cameradaemon.SaveMemAtBoot              u:object_r:vendor_default_prop:s0
+cpp.set.clock                           u:object_r:vendor_default_prop:s0
+disable.cpp.power.collapse              u:object_r:vendor_default_prop:s0
+vendor.camera.                          u:object_r:vendor_camera_prop:s0
+vidc.enc.dcvs.extra-buff-count          u:object_r:vendor_default_prop:s0
 
 # Fingerprint
-persist.vendor.sys.fp.      u:object_r:vendor_fp_prop:s0
-persist.vendor.fpc.         u:object_r:vendor_fp_prop:s0
-persist.sys.fp.             u:object_r:vendor_fp_prop:s0
-ro.boot.fpsensor            u:object_r:vendor_fp_prop:s0
+fpc_kpi                                 u:object_r:vendor_default_prop:s0
+gf.debug.dump_data                      u:object_r:vendor_default_prop:s0
+persist.sys.fp.                         u:object_r:hal_fingerprint_prop:s0
+persist.vendor.sys.fp.                  u:object_r:hal_fingerprint_prop:s0
+ro.boot.fp.                             u:object_r:hal_fingerprint_prop:s0
+ro.boot.fpsensor                        u:object_r:hal_fingerprint_prop:s0
+sys.fp.                                 u:object_r:hal_fingerprint_prop:s0
 
-# Thermal
-sys.thermal.                u:object_r:thermal_engine_prop:s0
-persist.sys.thermal.        u:object_r:thermal_engine_prop:s0
+# Media
+gpu.stats.debug.level                   u:object_r:vendor_default_prop:s0
+
+# Mlipay
+persist.vendor.sys.pay.                 u:object_r:mlipay_prop:s0
+persist.vendor.sys.provision.status     u:object_r:mlipay_prop:s0
+
+# RIL
+ro.build.software.version               u:object_r:exported_radio_prop:s0
+ro.fota.oem                             u:object_r:exported_radio_prop:s0
+ro.miui.                                u:object_r:exported_radio_prop:s0
+ro.product.mod_device                   u:object_r:exported_radio_prop:s0
+
+# Thermal engine
+persist.sys.thermal.                    u:object_r:thermal_engine_prop:s0
+sys.thermal.                            u:object_r:thermal_engine_prop:s0
+
+# Wlan
+persist.vendor.wigig.npt.enable         u:object_r:vendor_default_prop:s0
