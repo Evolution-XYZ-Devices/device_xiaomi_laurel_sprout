@@ -5,6 +5,15 @@
 /data/vendor/goodix(/.*)?                       u:object_r:fingerprint_vendor_data_file:s0
 /dev/goodix_fp                                  u:object_r:fingerprint_device:s0
 
+
+# FOD
+/sys/devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param    u:object_r:sysfs_fod:s0
+/sys/devices/platform/soc/4a88000.i2c/i2c-1/1-0038/touch/tp_dev/fod_status          u:object_r:sysfs_fod:s0
+/sys/class/touch/tp_dev/fod_status                    u:object_r:sysfs_fod:s0
+
+# FOD HAL
+/vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_laurel_sprout            u:object_r:hal_lineage_fod_default_exec:s0
+
 # Hexagon DSP-side executable needed for Halide operation
 # This is labeled as public_adsprpcd_file as it needs to be read by apps
 # (e.g. Google Camera App)
