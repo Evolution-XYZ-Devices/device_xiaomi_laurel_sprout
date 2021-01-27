@@ -546,9 +546,15 @@
          specified -->
     <string name="default_wallpaper_component" translatable="false">com.breel.wallpapers19/com.breel.wallpapers19.doodle.wallpaper.variations.DoodleWallpaperV1</string>
 
-    <!-- Minimum screen brightness setting allowed by the power manager.
-         The user is forbidden from setting the brightness below this level. -->
+    <!-- Note: This setting is deprecated, please use
+    config_screenBrightnessSettingMinimumFloat instead -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
+
+    <!-- Minimum screen brightness setting allowed by power manager.
+         -2 is invalid so setting will resort to int value specified above.
+         Set this to 0.0 to allow screen to go to minimal brightness.
+         The user is forbidden from setting the brightness below this level. -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">1</item>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
