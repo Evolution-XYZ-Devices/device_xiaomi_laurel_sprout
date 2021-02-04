@@ -467,6 +467,12 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
+# Sounds
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=The_big_adventure.ogg \
+    ro.config.notification_sound=Hey.ogg \
+    ro.config.alarm_alert=Cuckoo_clock.ogg
+
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext
