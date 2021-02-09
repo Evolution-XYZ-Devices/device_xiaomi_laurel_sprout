@@ -216,8 +216,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
-    libdng_sdk.vendor \
-    Snap
+    libdng_sdk.vendor
 
 # Context Hub
 PRODUCT_PACKAGES += \

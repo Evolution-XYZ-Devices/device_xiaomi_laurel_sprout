@@ -16,8 +16,6 @@ $(call inherit-product, device/xiaomi/laurel_sprout/device.mk)
 WITH_GAPPS := true
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
-# Inherit from custom vendor
-#$(call inherit-product, vendor/MiuiCamera/config.mk)
 
 # Props
 EVO_MAINTAINER := HemantSachdeva
