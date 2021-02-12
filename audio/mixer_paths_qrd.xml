@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Copyright (c) 2015-2019, The Linux Foundation. All rights reserved.    -->
+<!-- Copyright (c) 2015-2020, The Linux Foundation. All rights reserved.    -->
 <!--                                                                        -->
 <!-- Redistribution and use in source and binary forms, with or without     -->
 <!-- modification, are permitted provided that the following conditions are -->
@@ -185,6 +185,9 @@
     <ctl name="VoiceMMode1_Tx Mixer USB_AUDIO_TX_MMode1" value="0" />
     <!-- Multimode Voice1 Display-Port -->
     <ctl name="DISPLAY_PORT_RX_Voice Mixer VoiceMMode1" value="0" />
+    <!-- Multimode Voice1 proxy-Port -->
+    <ctl name="PROXY_RX_Voice Mixer VoiceMMode1" value="0" />
+    <ctl name="VoiceMMode1_Tx Mixer PROXY_TX_MMode1" value="0" />
     <!-- Miltimode Voice1 end-->
 
     <!-- Multimode Voice2 -->
@@ -201,6 +204,9 @@
     <ctl name="VoiceMMode2_Tx Mixer USB_AUDIO_TX_MMode2" value="0" />
     <!-- Multimode Voice2 Display-Port -->
     <ctl name="DISPLAY_PORT_RX_Voice Mixer VoiceMMode2" value="0" />
+    <!-- Multimode Voice2 proxy-Port -->
+    <ctl name="PROXY_RX_Voice Mixer VoiceMMode2" value="0" />
+    <ctl name="VoiceMMode2_Tx Mixer PROXY_TX_MMode2" value="0" />
     <!-- Multimode Voice2 end-->
 
     <!-- Voice external ec. reference -->
@@ -213,14 +219,14 @@
     <!-- RT Proxy Cal end -->
 
     <!-- Incall Recording -->
-    <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="0" />
-    <ctl name="MultiMedia1 Mixer VOC_REC_DL" value="0" />
+    <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="0" />
+    <ctl name="MultiMedia9 Mixer VOC_REC_DL" value="0" />
     <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="0" />
     <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="0" />
     <!-- Incall Recording End -->
 
     <!-- Incall Music -->
-    <ctl name="Incall_Music_2 Audio Mixer MultiMedia2" value="0" />
+    <ctl name="Incall_Music Audio Mixer MultiMedia2" value="0" />
     <ctl name="Incall_Music Audio Mixer MultiMedia9" value="0" />
     <!-- Incall Music End -->
 
@@ -459,8 +465,21 @@
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="RX_CDC_DMA_RX_0" />
     </path>
 
+    <path name="echo-reference bt-sco">
+        <ctl name="AUDIO_REF_EC_UL1 MUX" value="SLIM_7_RX" />
+        <ctl name="EC Reference Channels" value="Two"/>
+    </path>
+
+    <path name="echo-reference bt-sco-wb">
+        <path name="echo-reference bt-sco" />
+    </path>
+
+    <path name="echo-reference bt-sco-swb">
+        <path name="echo-reference bt-sco" />
+    </path>
+
     <path name="echo-reference-voip">
-		<ctl name="AUDIO_REF_EC_UL10 MUX" value="SEC_I2S_RX" />
+        <ctl name="AUDIO_REF_EC_UL10 MUX" value="SEC_I2S_RX" />
     </path>
 
     <path name="echo-reference-voip handset">
@@ -479,11 +498,24 @@
         <ctl name="AUDIO_REF_EC_UL10 MUX" value="RX_CDC_DMA_RX_0" />
     </path>
 
-    <path name="deep-buffer-playback">
-       <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+    <path name="echo-reference-voip bt-sco">
+        <ctl name="AUDIO_REF_EC_UL10 MUX" value="SLIM_7_RX" />
+        <ctl name="EC Reference Channels" value="Two"/>
     </path>
 
-	<path name="deep-buffer-playback speaker">
+    <path name="echo-reference-voip bt-sco-wb">
+        <path name="echo-reference-voip bt-sco" />
+    </path>
+
+    <path name="echo-reference-voip bt-sco-swb">
+        <path name="echo-reference-voip bt-sco" />
+    </path>
+
+    <path name="deep-buffer-playback">
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+    </path>
+
+    <path name="deep-buffer-playback speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
@@ -581,8 +613,8 @@
     <path name="low-latency-playback">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
-	
-	  <path name="low-latency-playback speaker">
+
+    <path name="low-latency-playback speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
 
@@ -774,9 +806,9 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
-	<path name="compress-offload-playback speaker">
+    <path name="compress-offload-playback speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="1" />
-   	</path>
+    </path>
 
     <path name="compress-offload-playback handset">
         <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia4" value="1" />
@@ -1071,7 +1103,7 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia11" value="1" />
     </path>
 
-	<path name="compress-offload-playback4 speaker">
+    <path name="compress-offload-playback4 speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia11" value="1" />
     </path>
     <path name="compress-offload-playback4 handset">
@@ -1165,7 +1197,7 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia12" value="1" />
     </path>
 
-	<path name="compress-offload-playback5 speaker">
+    <path name="compress-offload-playback5 speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia12" value="1" />
     </path>
 
@@ -1260,7 +1292,7 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia13" value="1" />
     </path>
 
-	<path name="compress-offload-playback6 speaker">
+    <path name="compress-offload-playback6 speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia13" value="1" />
     </path>
 
@@ -1355,7 +1387,7 @@
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia14" value="1" />
     </path>
 
-	<path name="compress-offload-playback7 speaker">
+    <path name="compress-offload-playback7 speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia14" value="1" />
     </path>
 
@@ -1446,8 +1478,11 @@
         <path name="compress-offload-playback7" />
     </path>
 
-
     <path name="compress-offload-playback8">
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia15" value="1" />
+    </path>
+
+    <path name="compress-offload-playback8 speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia15" value="1" />
     </path>
 
@@ -1539,6 +1574,10 @@
     </path>
 
     <path name="compress-offload-playback9">
+        <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia16" value="1" />
+    </path>
+
+    <path name="compress-offload-playback9 speaker">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
 
@@ -1698,7 +1737,7 @@
         <ctl name="SEC_MI2S_RX_DL_HL Switch" value="1" />
     </path>
 
-	<path name="play-fm speaker">
+    <path name="play-fm speaker">
         <ctl name="SLIMBUS_8 LOOPBACK Volume" value="1" />
         <ctl name="SEC_MI2S_RX Port Mixer SLIM_8_TX" value="1" />
         <ctl name="SEC_MI2S_RX_DL_HL Switch" value="1" />
@@ -1711,7 +1750,7 @@
     </path>
 
     <path name="incall-rec-uplink">
-        <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="1" />
+        <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="1" />
     </path>
 
     <path name="incall-rec-uplink bt-sco">
@@ -1750,8 +1789,12 @@
         <path name="incall-rec-uplink-compress" />
     </path>
 
+    <path name="incall-rec-uplink call-proxy-in">
+        <path name="incall-rec-uplink" />
+    </path>
+
     <path name="incall-rec-downlink">
-        <ctl name="MultiMedia1 Mixer VOC_REC_DL"  value="1" />
+        <ctl name="MultiMedia9 Mixer VOC_REC_DL"  value="1" />
     </path>
 
     <path name="incall-rec-downlink bt-sco">
@@ -1788,6 +1831,10 @@
 
     <path name="incall-rec-downlink-compress afe-proxy">
         <path name="incall-rec-downlink-compress" />
+    </path>
+
+    <path name="incall-rec-downlink call-proxy-in">
+        <path name="incall-rec-downlink" />
     </path>
 
     <path name="incall-rec-uplink-and-downlink">
@@ -1832,6 +1879,10 @@
         <path name="incall-rec-uplink-and-downlink-compress" />
     </path>
 
+    <path name="incall-rec-uplink-and-downlink call-proxy-in">
+        <path name="incall-rec-uplink-and-downlink" />
+    </path>
+
     <path name="hfp-sco">
     </path>
 
@@ -1851,7 +1902,7 @@
         <ctl name="Voip_Tx Mixer TX_CDC_DMA_TX_3_Voip" value="1" />
     </path>
 
-	<path name="compress-voip-call speaker">
+    <path name="compress-voip-call speaker">
         <ctl name="SEC_MI2S_RX_Voice Mixer Voip" value="1" />
         <ctl name="Voip_Tx Mixer TX_CDC_DMA_TX_3_Voip" value="1" />
     </path>
@@ -1901,7 +1952,7 @@
         <ctl name="VoiceMMode1_Tx Mixer TX_CDC_DMA_TX_3_MMode1" value="1" />
     </path>
 
-	<path name="voicemmode1-call speaker">
+    <path name="voicemmode1-call speaker">
         <ctl name="SEC_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer TX_CDC_DMA_TX_3_MMode1" value="1" />
     </path>
@@ -1949,6 +2000,11 @@
     <path name="voicemmode1-call display-port">
         <ctl name="DISPLAY_PORT_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer TX_CDC_DMA_TX_3_MMode1" value="1" />
+    </path>
+
+    <path name="voicemmode1-call call-proxy">
+        <ctl name="PROXY_RX_Voice Mixer VoiceMMode1" value="1" />
+        <ctl name="VoiceMMode1_Tx Mixer PROXY_TX_MMode1" value="1" />
     </path>
 
     <path name="voicemmode2-call">
@@ -2004,6 +2060,11 @@
     <path name="voicemmode2-call display-port">
         <ctl name="DISPLAY_PORT_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer TX_CDC_DMA_TX_3_MMode2" value="1" />
+    </path>
+
+    <path name="voicemmode2-call call-proxy">
+        <ctl name="PROXY_RX_Voice Mixer VoiceMMode2" value="1" />
+        <ctl name="VoiceMMode2_Tx Mixer PROXY_TX_MMode2" value="1" />
     </path>
 
     <!-- VoIP Rx settings -->
@@ -2480,6 +2541,10 @@
         <path name="incall_music_uplink" />
     </path>
 
+    <path name="incall_music_uplink call-proxy">
+        <path name="incall_music_uplink" />
+    </path>
+
     <!--  bug 437814 - S88512AA1 audio fro sos -->
     <path name="incall_music_uplink2">
         <ctl name="Incall_Music_2 Audio Mixer MultiMedia2" value="1" />
@@ -2529,6 +2594,10 @@
         <path name="incall_music_uplink2" />
     </path>
 
+    <path name="incall_music_uplink2 speaker-safe-and-usb-headphones">
+        <path name="incall_music_uplink2" />
+    </path>
+
     <path name="incall_music_uplink2 headphones">
         <path name="incall_music_uplink2" />
     </path>
@@ -2537,7 +2606,15 @@
         <path name="incall_music_uplink2" />
     </path>
 
+    <path name="incall_music_uplink2 speaker-safe-and-headphones">
+        <path name="incall_music_uplink2" />
+    </path>
+
     <path name="incall_music_uplink2 speaker-and-bt-sco">
+        <path name="incall_music_uplink2" />
+    </path>
+
+    <path name="incall_music_uplink2 speaker-safe-and-bt-sco">
         <path name="incall_music_uplink2" />
     </path>
 
@@ -2549,6 +2626,10 @@
         <path name="incall_music_uplink2" />
     </path>
 
+    <path name="incall_music_uplink2 speaker-safe-and-bt-a2dp">
+        <path name="incall_music_uplink2" />
+    </path>
+
     <path name="incall_music_uplink2 bt-a2dp">
         <path name="incall_music_uplink2" />
     </path>
@@ -2557,7 +2638,11 @@
         <path name="incall_music_uplink2" />
     </path>
 
-   <path name="spkr-rx-calib">
+    <path name="incall_music_uplink2 call-proxy">
+        <path name="incall_music_uplink2" />
+    </path>
+
+    <path name="spkr-rx-calib">
         <ctl name="SEC_MI2S_RX_DL_HL Switch"  value="1" />
     </path>
 
@@ -2571,7 +2656,7 @@
         <ctl name="TX_CDC_DMA_TX_3 Channels" value="One" />
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
         <ctl name="ADC1_MIXER Switch" value="1" />
-		<ctl name="ADC1 Volume" value="12" />
+        <ctl name="ADC1 Volume" value="12" />
     </path>
 
     <path name="amic2">
@@ -2581,7 +2666,7 @@
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
         <ctl name="ADC2_MIXER Switch" value="1" />
         <ctl name="ADC2 MUX" value="INP2" />
-		<ctl name="ADC2 Volume" value="12" />
+        <ctl name="ADC2 Volume" value="12" />
     </path>
 
 
@@ -2592,7 +2677,7 @@
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
         <ctl name="ADC2_MIXER Switch" value="1" />
         <ctl name="ADC2 MUX" value="INP3" />
-		<ctl name="ADC2 Volume" value="12" />
+        <ctl name="ADC2 Volume" value="12" />
     </path>
 
     <path name="dmic1">
@@ -3076,6 +3161,9 @@
 	 <path name="max-speaker-mi">
     </path>
     <!--  OA4167862,zhanghao.wt,20190329,add and modify for new device and acdb_id end -->
+    <path name="call-proxy">
+    </path>
+
 	<path name ="voice-music-tx">
     </path>
 
