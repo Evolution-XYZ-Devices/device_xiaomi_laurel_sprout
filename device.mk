@@ -370,7 +370,11 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power@1.3-service.laurel_sprout-libperfmgr \
+    android.hardware.power.stats@1.0-service.pixel
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Protobuf
 PRODUCT_COPY_FILES += \
