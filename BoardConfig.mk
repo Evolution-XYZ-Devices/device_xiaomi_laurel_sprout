@@ -203,6 +203,9 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
+# Shim
+TARGET_LD_SHIM_LIBS := \
+    /product/lib64/libdpmframework.so|libdpmframework_shim.so
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true

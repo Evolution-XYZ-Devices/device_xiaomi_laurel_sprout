@@ -53,11 +53,6 @@ function blob_fixup() {
     vendor/bin/hw/vendor.qti.hardware.scve.panorama@1.0-service | vendor/bin/hw/vendor.qti.hardware.scve.objecttracker@1.0-service | vendor/lib/hw/camera.trinket.so | lib64/libwfdnative.so | vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0-halimpl.so | vendor/lib/vendor.qti.hardware.scve.panorama@1.0-halimpl.so | vendor/bin/hw/vendor.display.color@1.0-service )
 		sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
         ;;
-        
-    # Shim
-    product/lib64/libdpmframework.so)
-        patchelf --add-needed libdpmframework_shim.so "${2}"
-        ;;
     esac
 }
 
