@@ -473,6 +473,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdpmframework_shim
 
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
