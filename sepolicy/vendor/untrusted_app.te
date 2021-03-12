@@ -1,1 +1,0 @@
-allow untrusted_app theme_prop:file { getattr map open read };

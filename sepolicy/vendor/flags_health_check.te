@@ -54,7 +54,6 @@ allow flags_health_check lowpan_prop:file { getattr map open };
 allow flags_health_check lpdumpd_prop:file { getattr map open };
 allow flags_health_check media_variant_prop:file { getattr map open };
 allow flags_health_check misc_writer_prop:file { getattr map open };
-allow flags_health_check mlipay_prop:file { getattr map open };
 allow flags_health_check mmc_prop:file { getattr map open };
 allow flags_health_check mock_ota_prop:file { getattr map open read };
 allow flags_health_check net_dns_prop:file { getattr map open };
