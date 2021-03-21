@@ -143,7 +143,8 @@ PRODUCT_PACKAGES_DEBUG += \
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
-    libdng_sdk.vendor
+    libdng_sdk.vendor \
+    Snap
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
