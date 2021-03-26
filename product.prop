@@ -24,6 +24,10 @@ ro.lmk.kill_timeout_ms=100
 ro.lmk.use_minfree_levels=true
 ro.lmk.log_stats=true
 
+# Iorap
+iorapd.perfetto.enable=true
+iorapd.readahead.enable=true
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
