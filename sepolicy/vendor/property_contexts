@@ -6,6 +6,8 @@ audio_hal.period_multiplier             u:object_r:vendor_default_prop:s0
 persist.audio.fluence.voicecomm         u:object_r:vendor_default_prop:s0
 
 # Camera
+persist.camera.sensor.name              u:object_r:vendor_default_prop:s0
+persist.camera.module.info              u:object_r:vendor_default_prop:s0
 cameradaemon.SaveMemAtBoot              u:object_r:vendor_default_prop:s0
 cpp.set.clock                           u:object_r:vendor_default_prop:s0
 disable.cpp.power.collapse              u:object_r:vendor_default_prop:s0

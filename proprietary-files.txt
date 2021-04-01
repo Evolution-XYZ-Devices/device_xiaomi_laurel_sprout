@@ -139,6 +139,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 
 # Camera
+lib/libcameraservice.so
+system/lib/vendor.qti.hardware.camera.device@3.2.so
 vendor/bin/hw/android.hardware.camera.provider@2.4-service
 vendor/camera/fonts/MFYueYuan-Regular.ttf
 vendor/camera/fonts/MI+LanTing_GB+Outside+YS_V2.3_20160322.ttf

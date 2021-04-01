@@ -1,3 +1,6 @@
+hal_client_domain(hal_camera_default, hal_configstore)
+hal_client_domain(hal_camera_default, hal_graphics_allocator)
+
 allow hal_camera_default sysfs:file r_file_perms;
 allow hal_camera_default mnt_vendor_file:dir r_dir_perms;
 allow hal_camera_default mnt_vendor_file:file r_file_perms;
@@ -9,5 +12,6 @@ allow hal_camera_default vendor_toolbox_exec:file execute_no_trans;
 allow hal_camera_default sysfs:dir { open read };
 
 get_prop(hal_camera_default, camera_ro_prop)
+get_prop(hal_camera_default, vendor_audio_prop)
 get_prop(hal_camera_default, vendor_video_prop)
 set_prop(hal_camera_default, vendor_camera_prop)
