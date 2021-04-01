@@ -51,6 +51,9 @@ persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 persist.radio.calls.on.ims=1
 
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
+
 # Wireless display
 debug.sf.latch_unsignaled=0
 persist.debug.wfd.enable=1
