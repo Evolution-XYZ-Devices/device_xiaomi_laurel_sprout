@@ -245,6 +245,13 @@ vendor/etc/camera/vidhance_calibration
 vendor/etc/init/android.hardware.camera.provider@2.4-service.rc
 vendor/lib/android.hardware.camera.provider@2.4-external.so
 vendor/lib/android.hardware.camera.provider@2.4-legacy.so
+vendor/lib/camera.device@1.0-impl.so
+vendor/lib/camera.device@3.2-impl.so
+vendor/lib/camera.device@3.3-impl.so
+vendor/lib/camera.device@3.4-external-impl.so
+vendor/lib/camera.device@3.4-impl.so
+vendor/lib/camera.device@3.5-external-impl.so
+vendor/lib/camera.device@3.5-impl.so
 vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so
 vendor/lib/hw/camera.trinket.so|e6b333ca3868e35ea7097d9960d37c44
 vendor/lib/libFaceGrade.so
