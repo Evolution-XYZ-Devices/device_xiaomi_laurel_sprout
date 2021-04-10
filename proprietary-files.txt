@@ -3022,6 +3022,12 @@ vendor/lib64/vendor.qti.gnss@3.0.so|cc558799af8132fcdb4ce1b41ac7ab25e86c68fa
 vendor/lib/libgrallocutils.so|42b16c8bee0ad715c2509b526f4cb67c325cec31
 vendor/lib64/libgrallocutils.so|175cce1c7b7cb20c745f39b84201936d5629937b
 
+# HotwordEnrollment
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
+
 # Firmware
 vendor/firmware/a225_pfp.fw
 vendor/firmware/a225_pm4.fw
