@@ -24,7 +24,7 @@
 /dev/spidev[0-9]\.1                             u:object_r:spidev_device:s0
 
 # Light HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_trinket                     u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_laurel_sprout                    u:object_r:hal_light_default_exec:s0
 
 # Neural Networks HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.2-service-qti                        u:object_r:vendor_hal_neuralnetworks_default_exec:s0
