@@ -13,3 +13,6 @@ allow init vendor_sysfs_kgsl:file write;
 allow init debugfs:file write;
 allow init vendor_hal_dpmqmi_hwservice:hwservice_manager find;
 allow init hal_light_hwservice:hwservice_manager find;
+
+# Smart charging
+allow init sysfs_battery_supply:file { setattr };
