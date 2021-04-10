@@ -4,9 +4,5 @@ genfscon sysfs /devices/soc/c176000.i2c/i2c-2/2-001d            u:object_r:sysfs
 # Camera
 genfscon sysfs /camera_sensorid/sensorid                        u:object_r:sysfs_graphics:s0
 
-# Power
-genfscon sysfs /devices/soc/soc:qcom,gpubw                      u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/soc/soc:qcom,cpubw                      u:object_r:vendor_sysfs_devfreq:s0
-
 # Touchpanel
 genfscon sysfs /touchpanel                                      u:object_r:sysfs_touchpanel:s0
