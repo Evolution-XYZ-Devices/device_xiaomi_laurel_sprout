@@ -238,4 +238,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Inherit from the proprietary version
--include vendor/xiaomi/laurel_sprout/BoardConfigVendor.mk
+include vendor/xiaomi/laurel_sprout/BoardConfigVendor.mk
