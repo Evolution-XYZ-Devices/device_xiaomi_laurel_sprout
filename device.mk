@@ -78,8 +78,7 @@ PRODUCT_PACKAGES += \
     liba2dpoffload \
     libaudio-resampler \
     libaudioroute \
-    libvolumelistener \
-    tinymix
+    libvolumelistener
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
