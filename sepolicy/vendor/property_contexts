@@ -14,9 +14,6 @@ disable.cpp.power.collapse              u:object_r:vendor_default_prop:s0
 vendor.camera.                          u:object_r:vendor_camera_prop:s0
 vidc.enc.dcvs.extra-buff-count          u:object_r:vendor_default_prop:s0
 
-# CTL
-ctl.dpmd                                u:object_r:ctl_dpmd_prop:s0
-
 # Fingerprint
 fpc_kpi                                 u:object_r:vendor_default_prop:s0
 gf.debug.dump_data                      u:object_r:vendor_default_prop:s0

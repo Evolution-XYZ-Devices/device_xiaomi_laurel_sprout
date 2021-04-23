@@ -1,1 +1,0 @@
-allow logpersist storage_file:dir search;

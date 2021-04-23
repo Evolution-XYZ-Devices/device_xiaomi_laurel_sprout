@@ -1,18 +1,4 @@
 allow init adsprpcd_file:file mounton;
-allow init hwservicemanager:binder { call transfer };
-allow init same_process_hal_file:file execute;
-allow init system_file:file execute_no_trans;
-allow init vendor_file:file { execute_no_trans execute };
-allow init vendor_sysfs_graphics:lnk_file read;
-allow init vndbinder_device:chr_file { ioctl map open read write };
-allow init sysfs_devices_system_cpu:file write;
-allow init vendor_latency_device:chr_file { open write };
-allow init vendor_sysfs_devfreq:file write;
-allow init vendor_sysfs_graphics:file rw_file_perms;
-allow init vendor_sysfs_kgsl:file write;
-allow init debugfs:file write;
-allow init vendor_hal_dpmqmi_hwservice:hwservice_manager find;
-allow init hal_light_hwservice:hwservice_manager find;
 
 # Smart charging
 allow init sysfs_battery_supply:file { setattr };

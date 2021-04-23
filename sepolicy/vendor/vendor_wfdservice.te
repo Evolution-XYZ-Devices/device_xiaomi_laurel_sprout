@@ -1,4 +1,0 @@
-allow vendor_wfdservice tombstoned_crash_socket:sock_file write;
-allow vendor_wfdservice wifidisplayhalservice_hwservice:hwservice_manager find;
-allow vendor_wfdservice wifidisplayhalservice_qti:binder call;
-allow vendor_wfdservice wifidisplayhalservice_qti:binder transfer; 
