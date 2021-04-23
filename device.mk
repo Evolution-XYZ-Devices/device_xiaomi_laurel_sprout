@@ -403,8 +403,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.target.rc \
     ueventd.qcom.rc \
-    fstab.qcom \
-    init.safailnet.rc
+    fstab.qcom
 
 # RCS
 PRODUCT_PACKAGES += \
