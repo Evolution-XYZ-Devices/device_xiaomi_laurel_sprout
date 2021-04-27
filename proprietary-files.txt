@@ -3179,7 +3179,6 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
 # Listen - Hardware
-vendor/lib/hw/sound_trigger.primary.trinket.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libsmwrapper.so
