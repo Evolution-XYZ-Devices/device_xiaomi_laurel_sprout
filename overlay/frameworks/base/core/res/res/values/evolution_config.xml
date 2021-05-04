@@ -78,4 +78,12 @@
     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
     <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
+    <!-- Default fod pressed color
+         0 = White
+         1 = Cyan
+         2 = Green
+         3 = Yellow
+    -->
+    <integer name="config_fod_pressed_color">0</integer>
 </resources>
