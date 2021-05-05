@@ -2,3 +2,6 @@ allow init adsprpcd_file:file mounton;
 
 # Smart charging
 allow init sysfs_battery_supply:file { setattr };
+
+allow init proc:file r_file_perms;
+allow init vendor_sysfs_graphics:lnk_file r_file_perms;
