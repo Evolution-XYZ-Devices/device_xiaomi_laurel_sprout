@@ -453,6 +453,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
+QCOM_SOONG_NAMESPACE := $(LOCAL_PATH)
+
 # Sounds
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=The_big_adventure.ogg \
