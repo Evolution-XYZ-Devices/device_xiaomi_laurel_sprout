@@ -21,3 +21,26 @@ if [ -d vendor/qcom/opensource/commonsys-intf/display/services ]; then
   git cherry-pick 9f11a5cfde93f70a0534d146c09c3f1c8683185a
   cd ../../../../
 fi
+
+# Firmware Check
+echo -e ${CL_GRN}"Want to build for Android 10 firmware?"${CL_RST}
+read -rp "[y|n]: " firmware
+
+if [ "${firmware}" == "y" ] || [ "${firmware}" == "Y" ]; then
+  if [ ! -f vendor/xiaomi/laurel_sprout/proprietary/vendor/firmware/leia_pfp_470.fw ]; then
+    echo -e ${CL_CYN}"Ok this may take a while to revert firmware to Android 10."${CL_RST}
+    cd vendor/xiaomi/laurel_sprout && git revert 76fa42fa2e3a9da17dc7fc87ee6dac237ccd033f --no-edit && cd ../../../
+    echo -e ${CL_CYN}"Reverting Prebuilt Images..!"${CL_RST}
+    cd device/xiaomi/laurel_sprout-images && git revert 65aa44840fc9b50a318d39b8438dcd4da008e3eb --no-edit && cd ../../../
+    echo -e ${CL_YLW}"You are ready for lunch"${CL_RST}
+  else
+    echo -e ${CL_YLW}"You are ready for lunch"${CL_RST}
+  fi
+elif [ -f vendor/xiaomi/laurel_sprout/proprietary/vendor/firmware/leia_pfp_470.fw ]; then
+  cd vendor/xiaomi/laurel_sprout && git cherry-pick 76fa42fa2e3a9da17dc7fc87ee6dac237ccd033f && cd ../../../
+  echo -e ${CL_CYN}"Picking Prebuilt Images..!"${CL_RST}
+  cd device/xiaomi/laurel_sprout-images && git cherry-pick 65aa44840fc9b50a318d39b8438dcd4da008e3eb && cd ../../../
+  echo -e ${CL_YLW}"You are ready for lunch"${CL_RST}
+else
+  echo -e ${CL_YLW}"You are ready for lunch"${CL_RST}
+fi
