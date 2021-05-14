@@ -1,2 +1,2 @@
-allow system_server proc:file r_file_perms;
-allow system_server vendor_display_notch_prop:file r_file_perms;
+allow system_server proc:file getattr;
+allow system_server vendor_display_notch_prop:file { getattr open read };
