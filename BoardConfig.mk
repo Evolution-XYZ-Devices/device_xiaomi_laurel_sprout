@@ -139,9 +139,6 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/framework_man
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/manifests/compatibility_matrix.xml
 
-# Keystore
-TARGET_PROVIDES_KEYMASTER := true
-
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
