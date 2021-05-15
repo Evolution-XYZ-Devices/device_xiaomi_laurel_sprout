@@ -1,0 +1,12 @@
+dontaudit untrusted_app_29 anr_data_file:dir read;
+dontaudit untrusted_app_29 app_data_file:dir search;
+dontaudit untrusted_app_29 default_android_service:service_manager find;
+dontaudit untrusted_app_29 hal_memtrack_hwservice:hwservice_manager find;
+dontaudit untrusted_app_29 proc:file read;
+dontaudit untrusted_app_29 proc_diskstats:file read;
+dontaudit untrusted_app_29 proc_filesystems:file read;
+dontaudit untrusted_app_29 proc_net:file { getattr read };
+dontaudit untrusted_app_29 proc_tty_drivers:file read;
+dontaudit untrusted_app_29 proc_version:file read;
+dontaudit untrusted_app_29 proc_zoneinfo:file read;
+dontaudit untrusted_app_29 system_lib_file:file execmod;

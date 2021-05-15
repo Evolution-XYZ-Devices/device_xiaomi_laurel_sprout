@@ -1,0 +1,2 @@
+dontaudit untrusted_app theme_prop:file read;
+dontaudit untrusted_app virtual_ab_prop:file read;
