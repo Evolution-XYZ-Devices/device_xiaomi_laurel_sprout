@@ -44,3 +44,5 @@ elif [ -f vendor/xiaomi/laurel_sprout/proprietary/vendor/firmware/leia_pfp_470.f
 else
   echo -e ${CL_YLW}"You are ready for lunch"${CL_RST}
 fi
+
+rm -rf hardware/xiaomi
