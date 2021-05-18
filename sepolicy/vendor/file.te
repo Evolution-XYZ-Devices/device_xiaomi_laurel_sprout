@@ -2,3 +2,5 @@ type ir_dev_file, file_type;
 type public_adsprpcd_file, file_type;
 type sysfs_touchpanel, fs_type, sysfs_type;
 type thermal_data_file, file_type, data_file_type;
+type hal_fod_laurel, domain;
+type hal_fod_laurel_exec, exec_type, vendor_file_type, file_type;
