@@ -31,8 +31,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.adm.buffering.ms=2 \
     vendor.audio.chk.cal.spk=2 \
     vendor.audio.chk.cal.us=0 \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
 	vendor.audio.flac.sw.decoder.24bit=true \
     vendor.audio.hw.aac.encoder=true \
 	vendor.audio.offload.buffer.size.kb=32 \
@@ -144,6 +142,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.enable_fb_ubwc=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
     ro.sf.force_light_brightness=1
+
+# Dolby
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.audio_fx.current=dolby \
+    ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1 \
+    vendor.audio.dolby.ds2.enabled=true \
+    vendor.audio.dolby.ds2.hardbypass=true
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
