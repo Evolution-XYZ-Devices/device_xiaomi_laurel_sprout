@@ -433,6 +433,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libdpmframework_shim
 
+# SOC Properties - for S
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.soc.manufacturer=Qualcomm \
+    ro.soc.model=SDM8150
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
