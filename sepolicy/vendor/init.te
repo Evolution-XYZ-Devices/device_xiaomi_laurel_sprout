@@ -5,3 +5,8 @@ allow init sysfs_battery_supply:file { setattr };
 
 allow init proc:file r_file_perms;
 allow init vendor_sysfs_graphics:lnk_file r_file_perms;
+
+# Dolby
+allow init vendor_data_file:file lock;
+allow init hal_audio_default:binder call;
+allow init platform_app:binder call;

@@ -2,3 +2,4 @@ vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon    u:obj
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon    u:object_r:hal_fingerprint_hwservice_xiaomi:s0
 vendor.xiaomi.hardware.fingerprintextension::IXiaomiFingerprint            u:object_r:hal_fingerprint_hwservice_xiaomi:s0
 vendor.qti.hardware.fingerprintext::IWTFingerprint                         u:object_r:hal_fingerprint_hwservice_xiaomi:s0
+vendor.dolby.hardware.dms::IDms                                            u:object_r:hal_dms_hwservice:s0
