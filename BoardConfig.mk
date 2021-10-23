@@ -119,6 +119,7 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := vendor/laurel_sprout-perf_defconfig
 BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Media
 TARGET_DISABLED_UBWC := true
