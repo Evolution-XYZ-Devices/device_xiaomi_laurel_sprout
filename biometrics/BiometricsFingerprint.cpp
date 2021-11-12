@@ -122,6 +122,15 @@ Return<void> BiometricsFingerprint::onFingerUp() {
     return Void();
 }
 
+Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
+    set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_OFF);
+    return Void();
+}
+
+Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
+    return Void();
+}
+
 }  // namespace implementation
 }  // namespace V2_3
 }  // namespace fingerprint
