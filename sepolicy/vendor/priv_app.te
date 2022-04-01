@@ -1,1 +1,0 @@
-allow priv_app cgroup:file r_file_perms;
