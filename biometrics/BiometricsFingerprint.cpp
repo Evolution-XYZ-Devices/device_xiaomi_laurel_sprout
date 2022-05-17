@@ -15,12 +15,19 @@
  */
 
 #define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.laurel_sprout"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.3-service.laurel_sprout"
 
+#include <log/log.h>
 #include "BiometricsFingerprint.h"
 
 #include <android-base/logging.h>
-#include <fstream>
 #include <cmath>
+#include <fstream>
+#include <thread>
+
+#include <fcntl.h>
+#include <poll.h>
+#include <sys/stat.h>
 
 #define FINGERPRINT_ERROR_VENDOR 8
 
