@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright (c) 2012-2016, The Linux Foundation. All rights reserved
+
+    Not a Contribution.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you
+    may not use this file except in compliance with the License.  You may
+    obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+    implied.  See the License for the specific language governing
+    permissions and limitations under the License.
+-->
+<resources>
+    <public type="array" name="config_biometric_sensors" id="0x7f010000" />
+    <public type="bool" name="config_fillMainBuiltInDisplayCutout" id="0x7f020000" />
+    <public type="dimen" name="rounded_corner_radius_bottom" id="0x7f030000" />
+    <public type="dimen" name="rounded_corner_radius_top" id="0x7f030001" />
+    <public type="dimen" name="status_bar_height_landscape" id="0x7f030002" />
+    <public type="dimen" name="status_bar_height_portrait" id="0x7f030003" />
+    <public type="string" name="config_mainBuiltInDisplayCutout" id="0x7f040000" />
+    <public type="xml" name="power_profile" id="0x7f050000" />
+</resources>
