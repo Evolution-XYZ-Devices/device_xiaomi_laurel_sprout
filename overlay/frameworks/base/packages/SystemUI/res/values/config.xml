@@ -109,4 +109,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           <item>240,6</item>
           <item>260,0</item>
     </string-array>
+
+    <!-- Use framework FOD dimming instead of kernel dimming -->
+    <bool name="config_udfpsFrameworkDimming">true</bool>
 </resources>
