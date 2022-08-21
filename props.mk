@@ -115,6 +115,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
     ro.vendor.bluetooth.wipower=false
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    bluetooth.device.class_of_device=90,2,12
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.preview.ubwc=0 \
