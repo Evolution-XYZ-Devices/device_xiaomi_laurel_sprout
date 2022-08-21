@@ -121,8 +121,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     bluetooth.profile.asha.central.enabled=false \
     bluetooth.profile.avrcp.target.enabled=true \
     bluetooth.profile.bap.broadcast.assist.enabled=true \
-    bluetooth.profile.bap.unicast.server.enabled=true \
+    bluetooth.profile.bap.unicast.client.enabled=true \
     bluetooth.profile.bas.client.enabled=true \
+    bluetooth.profile.ccp.server.enabled=true \
     bluetooth.profile.csip.set_coordinator.enabled=true \
     bluetooth.profile.gatt.enabled=true \
     bluetooth.profile.hap.client.enabled=true \
@@ -136,8 +137,8 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     bluetooth.profile.pan.panu.enabled=true \
     bluetooth.profile.pbap.server.enabled=true \
     bluetooth.profile.sap.server.enabled=true \
-    bluetooth.profile.tbs.server.enabled=true \
-    bluetooth.profile.vc.server.enabled=true
+    bluetooth.profile.vcp.controller.enabled=true
+
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
