@@ -17,4 +17,6 @@ cc_library_shared {
         "libgui",
         "libutils",
     ],
+    compile_multilib: "64",
+    system_ext_specific: true
 }
