@@ -9,3 +9,12 @@ cc_library_shared {
     srcs: ["libwatermark_shim/libwatermark_shim.c"],
     vendor: true,
 }
+
+cc_library_shared {
+    name: "libims_shim",
+    srcs: ["libims_shim/Surface.cpp"],
+    shared_libs: [
+        "libgui",
+        "libutils",
+    ],
+}
