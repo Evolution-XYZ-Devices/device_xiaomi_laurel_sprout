@@ -248,6 +248,8 @@
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
     <!-- Screen brightness when dozing. -->
     <integer name="config_screenBrightnessDoze">17</integer>
+    <!-- 16/254 = 0.06299212598 -->
+    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.062992</item>
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
     <bool name="config_setColorTransformAccelerated">true</bool>
 
