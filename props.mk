@@ -96,7 +96,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.snd_mon.enable=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.media_vol_default=10 \
+    ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_default=5 \
     ro.config.vc_call_vol_steps=7
 
