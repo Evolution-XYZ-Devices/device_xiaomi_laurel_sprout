@@ -1,7 +1,3 @@
-# Audio
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.audio.feature.compr_voip.enable=true
-
 # ACDB override
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.calfile0=/vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb \
