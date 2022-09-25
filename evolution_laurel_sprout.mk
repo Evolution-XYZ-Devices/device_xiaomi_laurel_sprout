@@ -36,18 +36,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # ABI Checks
 SKIP_ABI_CHECKS := true
 
-# FOD Animation
-EXTRA_FOD_ANIMATIONS := true
-
 # Props
-EVO_MAINTAINER := HemantSachdeva
 EVO_BUILD_TYPE := OFFICIAL
-EVO_SUPPORT_URL := https://t.me/EvolutionXLaurel_Sprout
-EVO_DONATE_URL := https://pages.razorpay.com/HemantSachdevaa
-BUILD_USERNAME := Hemant
-BUILD_HOSTNAME := Evolution-X
-
-WITH_GAPPS := true
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_GAPPS_ARCH := arm64
