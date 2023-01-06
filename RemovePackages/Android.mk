@@ -5,19 +5,19 @@ LOCAL_MODULE := RemovePackages
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
+	ANGLE \
+	BetterBugStub \
+	AmbientSensePrebuilt \
+	AppDirectedSMSService \
+	CalculatorGooglePrebuilt \
 	CalendarGooglePrebuilt \
 	Camera2 \
 	Camera2Stub \
-	Drive \
-	Maps \
-	FilesPrebuilt \
-	OBDM_Permissions \
-	SafetyHubPrebuilt \
-	SprintDM \
-	SprintHM \
-	USCCDM \
-	VZWAPNLib \
-	VzwOmaTriger
+	CalendarGooglePrebuilt \
+	CarrierLocation \
+	DeviceIntelligenceNetworkPrebuilt \
+	PlayAutoInstallConfig \
+	Velve
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
